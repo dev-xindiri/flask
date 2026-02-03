@@ -1,11 +1,18 @@
-from flask import Flask
+import os
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__,
+    static_folder='static',
+    template_folder='templates')
 
 @app.route("/")
 def index():
-    return "Hello from Wolke!"
+    # Retorna o ficheiro HTML da pasta /templates
+    return render_template("index.html")
 
 @app.route("/healthz")
 def health():
     return {"status": "healthy"}, 200
+
+if __name__ == "__main__":
+    app.run()

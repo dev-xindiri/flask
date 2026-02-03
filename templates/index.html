@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-mz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask no Wolke</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Olá de Mundo!</h1>
+      <p>
+        A tua aplicação Flask está a correr de forma <strong>smooth</strong> no
+        Wolke.
+      </p>
+      <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
+    </div>
+  </body>
+</html>

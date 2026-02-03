@@ -12,7 +12,7 @@
   <body>
     <div class="container">
       <h1>Olá de Mundo!</h1>
-      <h3>From: {{ config.NAME if config,NAME else "No name set" }}</h3>
+      <h3>From: {{ config.NAME if config.NAME else "No name set" }}</h3>
       <p>
         A tua aplicação Flask está a correr de forma <strong>smooth</strong> no
         wolke.host.
